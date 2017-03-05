@@ -35,6 +35,7 @@ class CommandDispatcher(object):
         self.registerHandler('mute', self._muteHandler)
         self.registerHandler('stop', lambda: self.core.playback.stop().get())
         self.registerHandler('next', lambda: self.core.playback.next().get())
+        self.registerHandler('clear', lambda: self.core.tracklist.clear().get())
         self.registerHandler('previous',
                              lambda: self.core.playback.previous().get())
         self.registerHandler('volumedown',

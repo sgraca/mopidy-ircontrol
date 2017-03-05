@@ -4,7 +4,7 @@ import os
 from mopidy import config, ext
 
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 class Extension(ext.Extension):
@@ -26,6 +26,7 @@ class Extension(ext.Extension):
         schema['stop'] = config.String()
         schema['volumeup'] = config.String()
         schema['volumedown'] = config.String()
+        schema['clear'] = config.String()
         schema['power'] = config.String()
         schema['menu'] = config.String()
         schema['favorites'] = config.String()
